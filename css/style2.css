@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:wght@500&family=Playfair+Display&family=Raleway&family=Roboto:wght@300&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Newsreader:wght@500&family=Playfair+Display&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:300,400,500,600,700,800,900&display=swap'); 
+@import url('<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">');
+@font-face{
+    font-family:pixellari;
+    src:url("font")
+}
+*
+{
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(#4a3779,#e8ac6e);
+    
+}
+
+header{
+    margin:2px;
+    position:absolute;
+    top:0;
+    left:0;
+    right: 50px;
+    width:100%;
+    padding: 20px 20px;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header .logo{
+    color:white;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-top: 15px;
+    padding-right:20%;
+}
+
+header ul{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li{
+    list-style: none;
+    margin-left: 20px;
+}
+
+header ul li a{
+    text-decoration: none;
+    padding: 10px 12px;
+    color: white;
+    border-radius: 25px;
+}
+
+header ul li a:hover,
+header ul li a.active{
+    background: white;
+    color:black;
+}
+
+.contact{
+    min-height:100vh;
+    padding:50px 100px;
+    align-items: center;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.contact .content{
+    max-width:800px;
+    text-align: center;
+}
+.contact .content h4{
+    font-size: 36px;
+    font-weight: 500;
+    color:white;
+}
+.contact .content p{
+    font-weight: 500;
+    color:white;
+}
+
+.container{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    
+}
+.container.contactinfo{
+    width:50%;
+    display:flex;
+    flex-direction: column;
+}
+.container .contactinfo .box{
+    position: relative;
+    padding: 20px 0;
+    display:flex;
+}
+.container .contactinfo .box .icon{
+    min-width:60px;
+    height:60px;
+    background:white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 20px;
+
+}
+.container .contactinfo .box .textc{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color:white;
+    flex-direction: column;
+    font-weight: 300;
+}
+.container .contactinfo .box .textc .h4{
+    font-weight: 500;
+    color:#311838;
+}
+.contactform{
+    width:40%;
+    padding:40px;
+    margin-left: 20px;
+    background:white;
+}
+.contactform h4{
+    font-size: 25px;
+    color:#000000;
+    font-weight: 500;
+}
+.contactform .inputbox{
+    position:relative;
+    width:100%;
+    margin-top:10px;
+}
+.contactform .inputbox input,
+.contactform .inputbox textarea{
+    width:100%;
+    padding:5px 0;
+    font-size: 15px;
+    margin: 10px 0;
+    border:none;
+    border-bottom: 2px solid #381b3f;
+    outline:none;
+    resize: none;
+}
+.contactform .inputbox span{
+    position: absolute;
+    left:0;
+    padding: 5px 0;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color:#311838;
+}
+.contactform .inputbox input:focus~span,
+.contactform .inputbox input:valid~span,
+.contactform .inputbox textarea:focus~span,
+.contactform .inputbox textarea:valid~span
+{
+    color:#0f0931;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.contactform .inputbox input[type="submit"]{
+    width:100px;
+    background:#e8ac6e;
+    color:white;
+    border:none;
+    cursor:pointer;
+    padding: 10px;
+    font-size: 16px;
+}
+
+@media (max-width:991px){
+    .contact{
+        padding:50px;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .container .contactinfo{
+        margin-bottom: 40px;
+    }
+    .container .contactinfo, .contactform{
+        width:100%;
+    }
+    
+}
+h3{
+    font-family: pixellari;
+    color:white;
+    font-size: 400%;
+}
+.section2{
+    text-align:center;
+    width:100%;
+    color:aliceblue;
+    background-color: #0f0931;
+}
