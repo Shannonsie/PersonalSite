@@ -1,3 +1,11 @@
+function isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+    
+    if (!isMobile()) {
+    document.write('<script src="app.js"></script>');
+    }
+
 let stars = document.getElementById("stars");   
 let sun = document.getElementById("sun");
 let moon = document.getElementById("moon");

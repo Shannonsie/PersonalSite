@@ -17,12 +17,10 @@ body{
     min-height: 100vh;
     overflow-x: hidden;
     background: linear-gradient(#4a3779,#e8ac6e);
-    
+
 }
 
 header{
-    margin:2px;
-    position:absolute;
     top:0;
     left:0;
     right: 50px;
@@ -31,17 +29,24 @@ header{
     display:flex;
     justify-content: space-evenly;
     align-items: center;
+    position: fixed;
+    z-index:999;
+    background:#4a3779 !important; 
+}
+
+header .sticky{
+    padding: 20px;
 }
 
 header .logo{
-color:white;
-font-weight: 700;
-text-decoration: none;
-font-size: 2em;
-text-transform: uppercase;
-letter-spacing: 2px;
-padding-top: 15px;
-padding-right:20%;
+    color:white;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-top: 15px;
+    padding-right:20%;
 }
 
 header ul{
@@ -52,7 +57,9 @@ header ul{
 
 header ul li{
     list-style: none;
+    display: inline-block;
     margin-left: 20px;
+    transition: color 0.3s ease;
 }
 
 header ul li a{
@@ -67,6 +74,7 @@ header ul li a.active{
     background: white;
     color:black;
 }
+
 section{
     position:relative;
     width:100%;
@@ -113,7 +121,7 @@ section img#mountains_front{
 .section3{
     width: 100%;
     text-align:center;
-    
+    padding: 2px;
     color:aliceblue;
     background-color: #0f0931;
 }
@@ -135,10 +143,31 @@ section img#mountains_front{
     z-index: 9;
     transform: translateY(100px);
 }
+.all{
+    display: flex;
+}
 .sec{
     position: relative;
     padding:100px;
     background: #0f0931;
+}
+
+.sec2{
+    position:relative;
+    padding:70px;
+    background: #0f0931;
+} 
+.sec2 h2{
+    font-size: 3em;
+    margin-bottom: 10px;
+    color:white;
+    margin-right: -50px;
+
+}
+.sec2 p{
+    font-size:1.2em;
+    color:white;
+
 }
 .insidesec{
     display: flex;
@@ -160,7 +189,7 @@ section img#mountains_front{
 .sectionexperience{
     width:100%;
     height:100%;
-    margin-top: 100px;
+    margin-top: 30px;
     padding:80px;
     margin-right:100px;
     align-items: center;
@@ -236,5 +265,202 @@ h3{
     
     }
 
+    .insidesec{
+        display:list-item;
+        text-align: justify;
+    }
+    .all{
+        display: list-item;
+    }
+
+}
+.body2{
+    min-height: 60vh;
+    align-items: center;
+    margin-bottom: 0;
+
+}
+h5{
+    color:white;
+    font-size: 3em;
+    text-align: center;
 }
 
+.wrapper{
+    width: 100%;
+    display: flex;
+}
+.carousel{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 30px;
+  }
+  .carousel .card{
+    color: #fff;
+    text-align: center;
+    margin: 20px 0;
+    line-height: 250px;
+    font-size: 90px;
+    font-weight: 600;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+  }
+  .carousel .card-1{
+    background: #ed1c24;
+  }
+  .carousel .card-2{
+    background: #0072bc;
+  }
+  .carousel .card-3{
+    background: #39b54a;
+  }
+  .carousel .card-4{
+    background: #f26522;
+  }
+  .carousel .card-5{
+    background: #630460;
+  }
+  .owl-dots{
+    text-align: center;
+    margin-top: 40px;
+  }
+  .owl-dot{
+    height: 15px;
+    width: 45px;
+    margin: 0 5px;
+    outline: none;
+    border-radius: 14px;
+    border: 2px solid #0072bc!important;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+  }
+  .owl-dot.active,
+  .owl-dot:hover{
+    background: #0072bc!important;
+  }
+  .body3{
+    margin-top: 200px;
+    display: grid;
+    height: 100%;
+    place-items: center;
+  }
+  ::selection{
+    color: #fff;
+    background: #6665ee;
+  }
+  .skill-bars{
+    padding: 25px 30px;
+    width: 600px;
+    background: #fff;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+    border-radius: 10px;
+  }
+  .skill-bars .bar{
+    margin: 20px 0;
+  }
+  .skill-bars .bar:first-child{
+    margin-top: 0px;
+  }
+  .skill-bars .bar .info{
+    margin-bottom: 5px;
+  }
+  .skill-bars .bar .info span{
+    font-weight: 500;
+    font-size: 17px;
+    opacity: 0;
+    animation: showText 0.5s 1s linear forwards;
+  }
+  @keyframes showText {
+    100%{
+      opacity: 1;
+    }
+  }
+  .skill-bars .bar .progress-line{
+    height: 10px;
+    width: 100%;
+    background: #f0f0f0;
+    position: relative;
+    transform: scaleX(0);
+    transform-origin: left;
+    border-radius: 10px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.05),
+                0 1px rgba(255,255,255,0.8);
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+  }
+  @keyframes animate {
+    100%{
+      transform: scaleX(1);
+    }
+  }
+  .bar .progress-line span{
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: #6665ee;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+  }
+  .bar .progress-line.html span{
+    width: 40%;
+  }
+  .bar .progress-line.css span{
+    width: 20%;
+  }
+  .bar .progress-line.psd span{
+    width: 60%;
+  }
+  .bar .progress-line.python span{
+    width: 20%;
+  }
+  .bar .progress-line.mysql span{
+    width: 5%;
+  }
+  .progress-line span::before{
+    position: absolute;
+    content: "";
+    top: -10px;
+    right: 0;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+  }
+  .progress-line span::after{
+    position: absolute;
+    top: -28px;
+    right: 0;
+    font-weight: 500;
+    background: #000;
+    color: #fff;
+    padding: 1px 8px;
+    font-size: 12px;
+    border-radius: 3px;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+  }
+  @keyframes showText2 {
+    100%{
+      opacity: 1;
+    }
+  }
+  .progress-line.html span::after{
+    content: "40%";
+  }
+  .progress-line.css span::after{
+    content: "20%";
+  }
+  .progress-line.psd span::after{
+    content: "60%";
+  }
+  .progress-line.python span::after{
+    content: "20%";
+  }
+  .progress-line.mysql span::after{
+    content: "5%";
+  }
+ 
